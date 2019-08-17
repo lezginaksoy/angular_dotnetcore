@@ -1,0 +1,39 @@
+
+
+<table class="table">  
+  <tr>
+    <th>Term No</th>
+    <th>Last Upate</th>
+    <th>card Brand</th>
+    <th>Account No</th>
+    <th>Txn Code</th>
+    <th>Txn SubCode</th>
+    <th>RRN</th>
+  </tr>  
+    <tbody>
+      <tr *ngFor="let txn of transactions">
+        <td>{{txn.termId }}</td>
+        <td>{{txn.lastupdate }}</td>
+        <td>{{txn.cardBrand }}</td>
+        <td>{{txn.accountNo }}</td>
+        <td>{{txn.txnCode}}</td>
+        <td>{{txn.txnSubCode}}</td>
+
+        
+        <td>{{txn.rrn }}</td>
+        <td>
+          <!--<span *ngIf="video.watched">Yes</span>-->
+          <!--<span *ngIf="!video.watched">No</span>-->
+        </td>
+        <td>
+          <button class="btn btn-lg btn-primary" style="width: 20%; margin-right: 2px;" (click)="getTransactionByTermId(txn)">
+            <strong>&gt;</strong>
+          </button>
+          <!-- <a ng-mouseup="getTransactionByTermId(txn)">mark fail</a>-->
+          <!--<button class="btn btn-link" style="height:25px; text-align:left;" (click)="getTransactionByTermId(txn)"><div>Go To Terminal </div></button>-->
+          <!--<a (click)="getTransactionByTermId(txn)">Go</a>-->
+
+        </td>
+      </tr>
+    </tbody>
+</table>

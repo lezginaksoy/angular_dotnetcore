@@ -1,0 +1,28 @@
+<p>
+  Add Terminal
+</p>
+
+<div> 
+    <form #videoForm="ngForm" (ngSubmit)="addTerminal()">  
+      <div class="form-group">   
+        <label for="name">Terminal Code</label>    
+        <input type="text" class="form-control" name="terminalCode" required [(ngModel)]="terminal.terminalCode" #title="ngModel">  
+      </div>
+  
+      <div class="form-group">   
+        <label for="link">Description</label>    
+        <input type="text" class="form-control" name="desc"  [(ngModel)]="terminal.desc"     #link="ngModel">  
+      </div>
+
+  <div class="form-group">   
+    <label for="brand">Brand</label>    
+
+    <select class="form-control"     name="brandId"     required     [(ngModel)]="terminal.brandId"     #genre="ngModel">           
+      <option *ngFor="let brand of brands" [value]="brand">{{brand}}</option>    
+    </select>  
+  </div>
+  
+    <button type="submit" class="btn btn-success"   [disabled]="!videoForm.form.valid">Submit</button>  
+    <button type="reset" class="btn"   (click)="videoForm.reset()">Reset</button> 
+  </form> 
+  </div>

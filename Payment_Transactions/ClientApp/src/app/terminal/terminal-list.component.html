@@ -1,0 +1,31 @@
+
+
+<table class="table">
+  <tr>
+    <td>
+      <h2>{{title}}</h2>
+    </td>
+  </tr>
+
+  <tr>
+    <th>TerminalCode</th>
+    <th>Desc</th>
+    <th>BrandId</th>
+    <th>Transactions</th>
+
+  </tr>
+  <tbody>
+    <tr *ngFor="let trm of term">
+      <td>{{trm.terminalCode}}</td>
+      <td>{{trm.desc }}</td>
+      <!--<td>{{trm.brandId }}</td>-->      
+      <td>
+        <span *ngIf="trm.brandId=='1' ">NCR</span>
+        <span *ngIf="trm.brandId=='2' ">WINCOR</span>
+      </td>
+      <td>
+        <a href="{{trm.id}}" target="_blank" (click)="watch(video)">Transactions</a>
+      </td>
+    </tr>
+  </tbody>
+</table>
