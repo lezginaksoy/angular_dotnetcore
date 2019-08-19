@@ -1,7 +1,7 @@
 
 
 # Payment_transaction is reduced application from a really project
-#Instead of real DB,initialize dummy data
+#Instead of real DB,initialize dummy data.
 This project is using .Net Core API and Angular 5
 EF Code First design
 Postgresql  
